@@ -197,12 +197,12 @@ namespace Monday_Tradeskola.Controllers
 
             try
             {
-                string from = "dbtird.intern4@gmail.com";
+                string from = "";
                 string subject = trainingTopic + ":" + " Training Certification";
                 string smtpServer = "smtp.gmail.com";
                 int smtpPort = 587;
-                string smtpUser = "dbtird.intern4@gmail.com";
-                string smtpPass = "kovibpfwmuefqtil";
+                string smtpUser = "";
+                string smtpPass = "";
 
                 using (SmtpClient client = new SmtpClient(smtpServer, smtpPort))
 
@@ -235,7 +235,7 @@ namespace Monday_Tradeskola.Controllers
                 using (HttpClient client = new HttpClient())
                 {
                     var request = new HttpRequestMessage(HttpMethod.Post, "https://api.monday.com/v2/file");
-                    request.Headers.Add("Authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE2NjA2MTI1NSwiYWFpIjoxMSwidWlkIjoxNzM1ODE1NCwiaWFkIjoiMjAyMi0wNi0xN1QwNTo0NjowMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6Njc3NzM2MCwicmduIjoidXNlMSJ9.kHYwChnla-HsIRnc8fvtr1x4O8jp6xFLz-XRPZyYQNg");
+                    request.Headers.Add("Authorization", "");
                     var content = new MultipartFormDataContent();
                     content.Add(new StringContent($"mutation add_file($file: File!) {{add_file_to_column (item_id: {itemId}, column_id:\"files\" file: $file) {{id}}}}"), "query");
                     content.Add(new StringContent("{\"image\":\"variables.file\"}"), "map");

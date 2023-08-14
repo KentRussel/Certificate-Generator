@@ -48,7 +48,7 @@ namespace Monday_Tradeskola.Handlers
 
                 if (context.Id == "z")
                 {
-                    string apiToken = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE2NjA2MTI1NSwiYWFpIjoxMSwidWlkIjoxNzM1ODE1NCwiaWFkIjoiMjAyMi0wNi0xN1QwNTo0NjowMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6Njc3NzM2MCwicmduIjoidXNlMSJ9.kHYwChnla-HsIRnc8fvtr1x4O8jp6xFLz-XRPZyYQNg";
+                    string apiToken = "";
                     string apiRoot = "https://api.monday.com/v2";
 
                     using (var client = new MondayClient(apiToken, apiRoot))

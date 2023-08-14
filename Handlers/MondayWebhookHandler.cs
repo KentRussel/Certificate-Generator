@@ -49,8 +49,8 @@ namespace Monday_Tradeskola.Handlers
 
         private void SendMail(string strBody)
         {
-            string FromEmail = "dbtird.intern4@gmail.com";
-            string ToEmail = "kentpayumo16@gmail.com";
+            string FromEmail = "";
+            string ToEmail = "";
 
             MailAddress from = new MailAddress(FromEmail);
             MailAddress to = new MailAddress(ToEmail);
